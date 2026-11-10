@@ -14,18 +14,23 @@
 <section class="wrap two contact"><img class="side" src="images/contact.jpg" alt="Restored family slide" loading="lazy"><form id="f" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 <label>Name *<input name="name" required></label>
 <label>Email address *<input type="email" name="email" required></label>
+<p class="small note">Placing an order? Choose a service and how many sets you would like. We will reply to confirm your total, payment, and how to get your slides to us.</p>
+<label>Service<select name="service" id="service"><option value="Question">Just a question</option><option value="Order (service not chosen yet)" data-key="order">Order, not sure which service yet</option><option value="Recapture, $100 per set of 200" data-key="recapture">Recapture: $100 per set of 200 slides</option><option value="Recapture and Restore, $200 per set of 200" data-key="restore">Recapture and Restore: $200 per set of 200 slides</option></select></label>
+<label id="setsRow">Number of sets (200 slides each)<input type="number" name="sets" min="1" value="1" inputmode="numeric"></label>
 <label>Message *<textarea name="message" rows="6" required></textarea></label>
 <label>Phone number *<input type="tel" name="phone" placeholder="(000) 000-0000" required></label>
 <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 <button class="btn" type="submit">Send message</button><p id="status" class="small"></p></form></section>
 <script>
-const f=document.getElementById('f'),s=document.getElementById('status');
+const f=document.getElementById('f'),s=document.getElementById('status'),sv=document.getElementById('service'),sr=document.getElementById('setsRow');
+const k=new URLSearchParams(location.search).get('service');const o=k&&sv.querySelector('[data-key="'+k+'"]');if(o)o.selected=true;
+const upd=()=>{sr.style.display=sv.value==='Question'?'none':''};sv.addEventListener('change',upd);upd();
 f.addEventListener('submit',async e=>{e.preventDefault();s.textContent='Sending...';
 try{const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
 if(r.ok){f.reset();s.textContent='Thank you. Your message has been sent.';}else{s.textContent='Something went wrong. Please email us directly.';}}
 catch(x){s.textContent='Something went wrong. Please email us directly.';}});
 </script></main>
 <footer><div><h4>Follow us on Instagram</h4><a href="https://www.instagram.com/memory.keep" target="_blank" rel="noopener">@memory.keep</a></div>
-<div><h4>Save Your Family's Memories</h4><a class="btn" href="contact.html">Order Now</a></div>
+<div><h4>Save Your Family's Memories</h4><a class="btn" href="contact.html?service=order#f">Order Now</a></div>
 <p class="small">&copy; 2026 Memory Keep &middot; Gilbert, Arizona</p></footer>
 </body></html>

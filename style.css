@@ -28,3 +28,5 @@ footer{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:50px 28px 30p
 .photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.photos img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}.photos.two-up{grid-template-columns:1fr 1fr;margin-bottom:40px}
 blockquote.pull{margin:0;max-width:760px;font-size:22px;line-height:1.4;font-style:italic;opacity:.9}
 @media(max-width:760px){.strip,.photos.two-up{grid-template-columns:1fr}}
+select{display:block;width:100%;background:#2f2f2f;border:0;border-bottom:1px solid #888;color:inherit;font:inherit;font-size:16px;padding:8px 0;margin-top:6px;outline:none}
+.set{margin:4px 0 8px;opacity:.75}.note{margin:0 0 22px;opacity:.75;font-size:13px}

@@ -40,7 +40,7 @@ Then visit http://localhost:8000.
 ## Still to do
 
 - Replace `YOUR_FORM_ID` in `contact.html` with your Formspree form ID.
-- Set up a way to take orders and payment. The "Order Now" buttons currently go to the contact page (the old Pixieset store goes away with Pixieset).
+- Orders come in through the contact form (service + number of sets). Payment is arranged by reply; there is no online checkout.
 
 ## License
 
