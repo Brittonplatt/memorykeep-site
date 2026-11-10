@@ -37,6 +37,12 @@ Then visit http://localhost:8000.
 
 `.nojekyll` tells Pages to serve the files as-is.
 
+## Adding gallery photos
+
+1. Resize the photo to about 2000 px wide and save it in `gallery/` as the next number (for example `66.jpg`).
+2. In `gallery.html`, copy the last `<a href="gallery/65.jpg">…</a>` entry and change the number.
+3. Commit and push. The site updates in about a minute.
+
 ## Still to do
 
 - Orders come in through the contact form (service + number of sets). Payment is arranged by reply; there is no online checkout.
