@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact - Memory Keep</title>
+<meta name="description" content="Memory Keep, Gilbert, Arizona. Film slide digitization by image recapture.">
+<link rel="stylesheet" href="style.css"></head>
+<body class="">
+<header><a class="logo" href="index.html">MEMORY KEEP</a>
+<button class="menu" aria-label="Menu" onclick="document.body.classList.toggle('open')"><span></span><span></span><span></span></button>
+<nav><ul><li><a href="index.html">Home</a></li><li><a href="contact.html" class=active>Contact</a></li><li><a href="services.html">Services</a></li><li><a href="steps.html">Steps</a></li><li><a href="testimonial.html">Testimonial</a></li><li><a href="gallery.html">Gallery</a></li></ul></nav></header>
+<main>
+<section class="wrap two"><div><h1>Send us a message</h1></div><div class="right"><p class="label">Email: memorykeepdigitization@gmail.com</p></div></section>
+<section class="wrap"><form id="f" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<label>Name *<input name="name" required></label>
+<label>Email address *<input type="email" name="email" required></label>
+<label>Message *<textarea name="message" rows="6" required></textarea></label>
+<label>Phone number *<input type="tel" name="phone" placeholder="(000) 000-0000" required></label>
+<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+<button class="btn" type="submit">Send message</button><p id="status" class="small"></p></form></section>
+<script>
+const f=document.getElementById('f'),s=document.getElementById('status');
+f.addEventListener('submit',async e=>{e.preventDefault();s.textContent='Sending...';
+try{const r=await fetch(f.action,{method:'POST',body:new FormData(f),headers:{Accept:'application/json'}});
+if(r.ok){f.reset();s.textContent='Thank you. Your message has been sent.';}else{s.textContent='Something went wrong. Please email us directly.';}}
+catch(x){s.textContent='Something went wrong. Please email us directly.';}});
+</script></main>
+<footer><div><h4>Follow us on Instagram</h4><a href="https://www.instagram.com/memory.keep" target="_blank" rel="noopener">@memory.keep</a></div>
+<div><h4>Save Your Family's Memories</h4><a class="btn" href="contact.html">Order Now</a></div>
+<p class="small">&copy; 2026 Memory Keep &middot; Gilbert, Arizona</p></footer>
+</body></html>
