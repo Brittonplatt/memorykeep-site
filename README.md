@@ -39,8 +39,8 @@ Then visit http://localhost:8000.
 
 ## Still to do
 
-- Add `images/recapture.jpg` and `images/restore.jpg` (Services before/after).
 - Replace `YOUR_FORM_ID` in `contact.html` with your Formspree form ID.
+- Set up a way to take orders and payment. The "Order Now" buttons currently go to the contact page (the old Pixieset store goes away with Pixieset).
 
 ## License
 
