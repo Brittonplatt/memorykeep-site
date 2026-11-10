@@ -39,10 +39,7 @@ Then visit http://localhost:8000.
 
 ## Still to do
 
-- Add images:
-  - `images/hero.jpg` (home page background)
-  - `images/recapture.jpg` and `images/restore.jpg` (Services before/after)
-  - `gallery/01.jpg` through `gallery/40.jpg` (Gallery)
+- Add `images/recapture.jpg` and `images/restore.jpg` (Services before/after).
 - Replace `YOUR_FORM_ID` in `contact.html` with your Formspree form ID.
 
 ## License
