@@ -39,7 +39,6 @@ Then visit http://localhost:8000.
 
 ## Still to do
 
-- Replace `YOUR_FORM_ID` in `contact.html` with your Formspree form ID.
 - Orders come in through the contact form (service + number of sets). Payment is arranged by reply; there is no online checkout.
 
 ## License
